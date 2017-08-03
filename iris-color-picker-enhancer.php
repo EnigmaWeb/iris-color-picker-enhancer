@@ -15,7 +15,7 @@
 define('ICPE_PLUGIN_VERSION', '1.0');
 
 // Desfine Plugin URI Path
-define(ICPE_PLUGIN_URI, plugin_dir_url(__FILE__));
+define('ICPE_PLUGIN_URI', plugin_dir_url(__FILE__));
 
 // Plugin Menu
 function icpe_plugin_menu() {
