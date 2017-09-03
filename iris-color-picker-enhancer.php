@@ -73,7 +73,8 @@ function icpe_pallete_script() {
 }
 
 // Color Palettes
-add_action( 'admin_head', 'uphill_scripts' );
+add_action( 'admin_footer', 'uphill_scripts' );
+add_action( 'customize_controls_print_footer_scripts', 'uphill_scripts' );
 function uphill_scripts() {
 
 	$icpe_color_palettes1 = get_option( 'icpe_color_palettes1' );
@@ -115,21 +116,21 @@ function uphill_scripts() {
 }
 
 // Modify Plugin Activation Message
-add_action( 'admin_notices', 'plugin_activated');
+add_action( 'admin_notices', 'plugin_activated' );
 
-function plugin_activated( ) {
+function plugin_activated() {
 
-    if (1 != get_option('icp_active')) {
+	if ( 1 != get_option( 'icp_active' ) ) {
 
-	    $path_link = get_admin_url();
+		$path_link = get_admin_url();
 
-	    $new = "<div class='updated notice is-dismissible'><p>Plugin activated. <a href='" . $path_link . "options-general.php?page=iris-color-picker-enhancer'>Go to Iris Color Picker Enhancer Settings.</a></p></div>";
+		$new = "<div class='updated notice is-dismissible'><p>Plugin activated. <a href='" . $path_link . "options-general.php?page=iris-color-picker-enhancer'>Go to Iris Color Picker Enhancer Settings.</a></p></div>";
 
-	    echo $new;
+		echo $new;
 
-	    add_option('icp_active', 1);
+		add_option( 'icp_active', 1 );
 
-    }
+	}
 }
 
 
@@ -152,19 +153,19 @@ add_action( 'admin_head', 'icpe_color_picker_settings' );
 function icpe_color_picker_settings() {
 	?>
     <script>
-        jQuery(document).ready(function ($) {
+        jQuery(document).ready(function () {
 
-            $('.icpe-field').iris({
+            jQuery('.icpe-field').iris({
                 width: 150
             });
-            $(document).click(function (e) {
-                if (!$(e.target).is(".icpe-field, .iris-picker, .iris-picker-inner")) {
-                    $('.icpe-field').iris('hide');
+            jQuery(document).click(function (e) {
+                if (!jQuery(e.target).is(".icpe-field, .iris-picker, .iris-picker-inner")) {
+                    jQuery('.icpe-field').iris('hide');
                 }
             });
-            $('.icpe-field').click(function (event) {
-                $('.icpe-field').iris('hide');
-                $(this).iris('show');
+            jQuery('.icpe-field').click(function (event) {
+                jQuery('.icpe-field').iris('hide');
+                jQuery(this).iris('show');
                 return false;
             });
 
@@ -300,6 +301,6 @@ function icpe_admin_styling() {
  */
 register_deactivation_hook( plugin_basename( __FILE__ ), 'icp_deactivate' );
 function icp_deactivate() {
-    delete_option('icp_active');
+	delete_option( 'icp_active' );
 }
 
