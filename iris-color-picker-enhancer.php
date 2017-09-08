@@ -5,7 +5,7 @@
 	Plugin URI: http://wordpress.org/plugin/iris-color-picker-enhancer
 	Author URI: http://enigmaplugins.com
 	Description: Customise the default color palette used by Iris Color Picker
-	Version: 1.0
+	Version: 1.1
 	Requires at least: 2.7
 	Text Domain: iris-color-picker-enhancer
 	Domain Path: /languages

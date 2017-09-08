@@ -3,7 +3,7 @@ Contributors: EnigmaWeb
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CEJ9HFWJ94BG4
 Tags: iris, iris color, iris color picker, alpha, color swatches, color palette
 Requires at least: 2.7
-Tested up to: 4.5
+Tested up to: 4.8.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -44,10 +44,18 @@ Nothing yet.
 
 == Changelog ==
 
+= 1.1 =
+* Fix activation notice issue
+* Color palette fixes for default customizer
+* Undefined constant fix
+
 = 1.0 =
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.1 =
+* Two minor fixes plus one major fix for compatibility with default WordPress customizer. Upgrade advised.
 
 = 1.0 =
 Initial release
