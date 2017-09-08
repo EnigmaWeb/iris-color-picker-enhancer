@@ -44,7 +44,7 @@
 	    				?>
 
 	    					<div class="description" style="float:right;  width:50%">
-	    					<h2 class="desc_title"><?php _e('About this plugin', 'iris-color-picker-enhancer') ?></h1>
+	    					<h2 class="desc_title"><?php _e('About this plugin', 'iris-color-picker-enhancer') ?></h2>
 	    					<p> <?php _e('This is a simple plugin to customise the default color palette used by all instances of Iris Color Picker. Choose your default colors, and turn Alpha control on or off.', 'iris-color-picker-enhancer') ?> </p>
 	    					</div>
 
